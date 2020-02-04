@@ -68,14 +68,10 @@ def solution(input):
                 # check if live cell is still living
                 if checkLivecell(input,i,j):
                     result[i][j] = 1
-                else:
-                    result[i][j] = 0
             else:
                 # check if dead cells turn live cell
                 if checkDeadcell(input,i,j):
                     result[i][j] = 1
-                else:
-                    result[i][j] = 0
 
     return result
 
