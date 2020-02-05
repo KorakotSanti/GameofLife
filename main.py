@@ -47,7 +47,7 @@ def display_array(arr):
     count+= 1
     print(f'Generation: {count}')
 
-    sleep(2)
+    sleep(1)
 
 def solution(input):
     """
