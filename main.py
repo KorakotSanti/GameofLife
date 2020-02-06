@@ -42,7 +42,7 @@ def display_array(arr):
             else:
                 print(' ', end=' ')
         print()
-    
+
     print("\n\n")
     count+= 1
     print(f'Generation: {count}')
@@ -51,7 +51,7 @@ def display_array(arr):
 
 def solution(input):
     """
-    Function takes the array of cells and 
+    Function takes the array of cells and
     return the next generations of cells with the rules applied to them
 
     Parameters
@@ -93,49 +93,49 @@ def checkLivecell(input,crow,ccol):
     # going clockwise
     # after the third if statment would start checking if count exceeds 3
     if crow-1 >= 0 and ccol-1 >= 0:
-        if input[crow-1][ccol-1]:
+        if input[crow-1][ccol-1] == 1:
             live+=1
 
     if crow-1 >= 0:
-        if input[crow-1][ccol]:
+        if input[crow-1][ccol] == 1:
             live+=1
 
     if crow-1 >=0 and ccol+1 < maxcol:
-        if input[crow-1][ccol+1]:
+        if input[crow-1][ccol+1] == 1:
             live+=1
 
     if ccol+1 < maxcol:
-        if input[crow][ccol+1]:
+        if input[crow][ccol+1] == 1:
             live+=1
         if live > 3:
             return False
 
     if crow+1 < maxrow and ccol+1 < maxcol:
-        if input[crow+1][ccol+1]:
+        if input[crow+1][ccol+1] == 1:
             live+=1
         if live > 3:
             return False
-    
+
     if crow+1 < maxrow:
-        if input[crow+1][ccol]:
+        if input[crow+1][ccol] == 1:
             live+=1
         if live > 3:
             return False
-    
+
     if crow+1 < maxrow and ccol-1 >= 0:
-        if input [crow+1][ccol-1]:
+        if input [crow+1][ccol-1] == 1:
             live+=1
         if live > 3:
             return False
-    
+
     if ccol-1 >=0:
-        if input[crow][ccol-1]:
+        if input[crow][ccol-1] == 1:
             live+=1
         if live > 3:
             return False
-    
+
     # check if cell lives
-    if count == 2 or count == 3:
+    if live == 2 or live == 3:
         return True
 
     return False
@@ -158,7 +158,7 @@ def checkDeadcell(input,crow,ccol):
     # going clockwise
     # after the third if statment would start checking if count exceeds 3
     if crow-1 >= 0 and ccol-1 >= 0:
-        if input[crow-1][ccol-1]:
+        if input[crow-1][ccol-1] == 1:
             live+=1
 
     if crow-1 >= 0:
@@ -166,35 +166,35 @@ def checkDeadcell(input,crow,ccol):
             live+=1
 
     if crow-1 >=0 and ccol+1 < maxcol:
-        if input[crow-1][ccol+1]:
+        if input[crow-1][ccol+1] == 1:
             live+=1
 
     if ccol+1 < maxcol:
-        if input[crow][ccol+1]:
+        if input[crow][ccol+1] == 1:
             live+=1
         if live > 3:
             return False
 
     if crow+1 < maxrow and ccol+1 < maxcol:
-        if input[crow+1][ccol+1]:
+        if input[crow+1][ccol+1] == 1:
             live+=1
         if live > 3:
             return False
 
     if crow+1 < maxrow:
-        if input[crow+1][ccol]:
+        if input[crow+1][ccol] == 1:
             live+=1
         if live > 3:
             return False
 
     if crow+1 < maxrow and ccol-1 >= 0:
-        if input [crow+1][ccol-1]:
+        if input [crow+1][ccol-1] == 1:
             live+=1
         if live > 3:
             return False
 
     if ccol-1 >= 0:
-        if input[crow][ccol-1]:
+        if input[crow][ccol-1] == 1:
             live+=1
         if live > 3:
             return False
