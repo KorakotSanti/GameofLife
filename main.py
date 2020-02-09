@@ -212,7 +212,7 @@ def generateCells():
     """
     return [[randint(0,1) for j in range(maxcol)] for i in range(maxrow)]
 
-def main(row,col,generations):
+def main():
     """
     main function to run the whole program
 
@@ -226,9 +226,12 @@ def main(row,col,generations):
 
     count = 0
 
-    # the args get maxrow and maxcol
-    maxrow = row
-    maxcol = col
+    print("Welcome to Game of Life\n")
+
+    # the args get maxrow, maxcol, and number of generations
+    maxrow = int(input("Enter number of rows: "))
+    maxcol = int(input("Enter number of columns: "))
+    generations = int(input("Enter number of generations: "))
 
     # generate the intiate cells boards
     inputarr = generateCells()
@@ -240,3 +243,5 @@ def main(row,col,generations):
     for i in range(generations-1):
         inputarr = solution(inputarr)
         display_array(inputarr)
+
+main()

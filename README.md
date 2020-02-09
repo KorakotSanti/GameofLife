@@ -8,7 +8,8 @@ python3 -i main.py
 
 In the python interpreter
 -------------------------
-main(row,col,generations)
-- row: number of row in your board
-- col: number of col in your board
-- generations: how many generations you want to display
+main()
+
+In the program
+---------------
+Follow the user prompts
