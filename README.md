@@ -8,8 +8,8 @@ python3 -i main.py
 
 In the python interpreter
 -------------------------
-main()
+Type main() in command prompt or press F5 (Which will run file)
 
 In the program
 ---------------
-Follow the user prompts
+Follow the user prompts. Will ask you to input number of rows, columns, and how many generations you want. 
