@@ -226,7 +226,7 @@ def main():
 
     count = 0
 
-    print("Welcome to Game of Life\n")
+    print("Welcome to Conway's Game of Life!\n")
 
     # the args get maxrow, maxcol, and number of generations
     maxrow = int(input("Enter number of rows: "))
@@ -244,4 +244,5 @@ def main():
         inputarr = solution(inputarr)
         display_array(inputarr)
 
+    print("Thanks for Playing!")
 main()
